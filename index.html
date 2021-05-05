@@ -8,36 +8,48 @@
   </head>
   <body>
     <h1>Race Registration!</h1>
-    <form action="/race">
-        <div>
-      <label for="first">First Name</label>
-      <input type="text" name="first" id="first" />
-      <label for="last">Last Name</label>
-      <input type="text" name="last" id="last" required/>
-    </div>
-    <p>
-        Select a Race:</p>
-        <p>
-        <input type="radio" name="type" id="5k" value="5k">
-        <label for="5k">Fun Run 5k</label><br>
-        <input type="radio" name="type" id="half" value="half">
-        <label for="half">Half Marathon</label><br>
-        <input type="radio" name="type" id="full" value="full">
-        <label for="full">Full Marathon</label>
-    </p>
-    <div>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required/>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required/>
+    <form action="">
+      <div>
+        <label for="first">First Name</label>
+        <input type="text" name="first" id="first" required />
+        <label for="last">Last Name</label>
+        <input type="text" name="last" id="last" required />
       </div>
-      Select Age Group
-      <select name="age" id="age-select">
-        <option value="&lt 18">under 18</option>
-        <option value="&lt 18">under 18</option>
-        <option value="&lt 18">under 18</option>
-        <option value="&lt 18">under 18</option>
-      </select>
+      <p>Select a Race:</p>
+      <div>
+        <input type="radio" name="type" id="funrun" value="funrun" selected />
+        <label for="funrun">Fun Run 5k</label>
+      </div>
+      <div>
+        <input type="radio" name="type" id="half" value="half" />
+        <label for="half">Half Marathon</label>
+      </div>
+      <div>
+        <input type="radio" name="type" id="full" value="full" />
+        <label for="full">Full Marathon</label>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          minlength="5"
+          maxlength="20"
+          required
+        />
+      </div>
+      <div>
+        <Label for="age-select">Select Age Group</Label>>
+        <select name="age" id="age-select">
+          <option value="kids">under 18</option>
+          <option value="ya">18-30</option>
+          <option value="adults">30-50</option>
+          <option value="seniors">50+</option>
+        </select>
+      </div>
       <button>Register!</button>
     </form>
   </body>
